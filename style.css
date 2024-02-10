@@ -1,0 +1,167 @@
+/* using container for header and nav bar */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #FCD0B1;;
+    text-align: right;
+    padding-right: 100px;
+} 
+
+/* Style the navigation bar links */
+.navbar span {
+    margin: 0 75px; /* Adjust the value as needed */
+}
+/* Style the links inside the navigation bar when hovered */
+.nav-link:hover {
+    color: #888787; /* Change to your preferred color */
+    text-decoration: underline; /* Add underline */
+    transition: color 0.4s ease, text-decoration 0.4s ease; /* Add transition effect */
+}
+
+/* Style the links inside the navigation bar */
+.nav-link {
+    color: #2e2d2d; /* Change to your preferred color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* This will apply to all <h1> elements */
+h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'palatino', serif;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-family: 'palatino', serif;
+}
+
+/* This will apply to elements with class="myClass1" */
+.myClass1 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+/* This will apply to elements with class="myClass2" */
+.myClass2 {
+    font-size: 18px;
+    font-weight: lighter;
+    padding-left: 50px;
+}
+
+/* Format copyright */
+.myClass3 {
+    font-size: 12px;
+    font-weight: normal;
+    color: #747373; /* Set the text color */
+    text-align: center;
+    font-family: 'courier', monospace;
+}
+
+.myClass4 {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.myClass5 {
+    font-family: 'Courier New', Courier, monospace; /* Set the font family */
+    color: #000000; /* Set the text color */
+    font-size: 18px; /* Set the font size */
+    font-weight: lighter; /* Set the font weight */
+    line-height: 1; /* Set the line height */
+    margin-bottom: 8px; /* Add some space below each list item */
+    padding-left: 0px;
+}
+
+/* This will apply to the element with id="myId" */
+#myId {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+
+header {
+    background-color: #FCD0B1;
+    max-width: 100%;
+    max-height: 100vh;
+    height: 100px; /* Adjust this value to match the height of your header */
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 0px;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: hidden; /* Prevents horizontal scrolling */
+    justify-content: space-between;
+}
+
+/* Setting the background colour of the body */
+body {
+    background-color: #FFF1E5;
+    min-height: 100vh; /* Makes the body at least as tall as the viewport */
+    overflow-y: auto; /* Adds a vertical scrollbar if necessary */
+    overflow-x: hidden; /* Adds a vertical scrollbar if necessary */
+    max-width: 100%;
+    height: 100%;
+    margin: 0; /* clockwise */
+    padding: 0; /* Adjust this value to match the height of your header */
+}
+
+/* Setting list item styles */
+li {
+    font-family: 'Courier New', Courier, monospace; /* Set the font family */
+    color: #000000; /* Set the text color */
+    font-size: 18px; /* Set the font size */
+    font-weight: lighter; /* Set the font weight */
+    line-height: 1; /* Set the line height */
+    margin-bottom: 8px; /* Add some space below each list item */
+    padding-left: 50px;
+}
+
+/* Format list with bullets */
+ul {
+    list-style-type: square;
+    font-family: 'courier', monospace;
+}
+
+/* Format paragraphs */
+p {
+    font-family: 'Courier New', Courier, monospace; /* Set the font family */
+    color: #000000; /* Set the text color */
+    font-size: 18px; /* Set the font size */
+    font-weight: lighter; /* Set the font weight */
+    line-height: 1; /* Set the line height */
+    margin-bottom: 0px; /* Add some space below each paragraph */
+    padding-left: 0px;
+}
+
+/* Format the large logo */
+.logo2 {
+    width: 150px;  /* Adjust as needed */
+    height: auto;  /* Keep the aspect ratio */
+    display: block;
+}
+
+/* Format the logo */
+.logo {
+    width: 50px;  /* Adjust as needed */
+    height: auto;  /* Keep the aspect ratio */
+    display: block;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #FCD0B1;
+    height: 120px; /* Adjust this value to match the height of your footer */
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content vertically */
+    justify-content: center; /* Centers the content horizontally */
+}
