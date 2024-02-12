@@ -1,153 +1,317 @@
-/* using container for header and nav bar */
-.container {
+body{
+    margin: 0;
+    font-family: 'Roboto', 'sans-serif';
+    color: #333;
+    background: #FFF1E5;
+    font-size: 16px;
+   }
+   
+   section{
+    position: relative;
     display: flex;
     flex-direction: column;
-}
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+   }
 
-/* Center navigation bar */
-.navbar {
+   section2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-height: 400px;
+    padding: 100px 20vw;
+   }
+
+   header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding: 30px 10vw 30px 10vw;
+   }
+
+   footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+    padding: 50px 10vw 40px 10vw;
+    font-size: 16px;
+   }
+
+   .midpeach{
+    background: #FFD8B1;
+   }
+
+   .lightpeach{
+    background: #FFF1E5;
+   }
+
+   .blue{
+    background: #e8e8f8;
+   }
+
+   .black{
+    background: #000000;
+   }
+
+   .offwhite{
+    background: #F5F5F5;
+   }
+
+   .darkgrey{
+    background: #c2c0c0;
+   }
+
+   .offwhitetext{
+    color: #F5F5F5;
+   }
+
+/* Style the header arrow */
+
+.arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     overflow: hidden;
-    background-color: #FCD0B1;;
-    text-align: right;
-    padding-right: 100px;
-} 
-
-/* Style the navigation bar links */
-.navbar span {
-    margin: 0 75px; /* Adjust the value as needed */
-}
-/* Style the links inside the navigation bar when hovered */
-.nav-link:hover {
-    color: #888787; /* Change to your preferred color */
-    text-decoration: underline; /* Add underline */
-    transition: color 0.4s ease, text-decoration 0.4s ease; /* Add transition effect */
+    line-height: 0;
 }
 
-/* Style the links inside the navigation bar */
-.nav-link {
+.arrow svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+
+.arrow .shape-fill {
+    fill: #F5F5F5;
+}
+
+/* Style the footer */
+.arrow2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.arrow2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.arrow2 .shape-fill {
+    fill: #e8e8f8;
+}
+
+
+.tilt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.tilt svg{
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+    transform: rotateY(180deg);
+}
+
+.tilt .shape-fill{
+    fill: #FFD8B1;
+}
+
+.tilt2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.tilt2 svg{
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+    transform: rotateY(360deg);
+}
+
+.tilt2 .shape-fill{
+    fill: black;
+}
+
+.tilt3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.tilt3 svg{
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+    transform: rotateY(180deg);
+}
+
+.tilt3 .shape-fill{
+    fill: #e8e8f8;
+}
+
+.wrapper {
+    padding-top: 50px;
+    display: grid;
+    place-items: center center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    width: 100%;
+    grid-auto-rows: 200px;
+    column-gap: 10px;
+    row-gap: 110px;
+    }
+
+   .wrapper > * {
+        padding: 3px;
+        border-top: 1px solid #c2c0c0;
+        border-bottom: 1px solid #c2c0c0;
+    }
+
+  .wrapper2 {
+    display: grid;
+    place-items: center center;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    grid-auto-rows: 200px;
+    column-gap: 10px;
+    row-gap: 1em;
+  }
+
+  .wrapper img {
+    width: auto;
+    height: 300px;
+    object-fit: contain; /* or use 'cover' if you want the image to fill the grid cell */
+}
+
+/* Style the navigation bar */
+li a button {
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
     color: #2e2d2d; /* Change to your preferred color */
     text-decoration: none; /* Remove underline */
 }
 
-/* This will apply to all <h1> elements */
-h1 {
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-family: 'palatino', serif;
+/* Remove bullet points from the navigation */
+.nav-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Add this line to make the list items flex containers */
+    font-weight: bold;
 }
 
-h2 {
-    color: rgb(0, 0, 0);
-    text-align: left;
-    font-family: 'palatino', serif;
+/* Style the navigation bar */
+.nav-link li a {
+    color: #2e2d2d; /* Change to your preferred color */
+    text-decoration: none; /* Remove underline */
+    border-bottom: 3px solid transparent;
+    transition: all 0.4s ease 0s;
+    margin-right: 30px; /* Add space between the links */
 }
 
-/* This will apply to elements with class="myClass1" */
-.myClass1 {
-    font-size: 30px;
+/* Change the color of links on hover */
+.nav-link li a:hover {
+    color: #888787; /* Change to your preferred color */
+    border-bottom: 3px solid #FFD8B1; /* Add underline */
+}
+
+.nav-link li a:active {
+    border-bottom: 3px solid #FFD8B1; /* Add underline */
+}
+
+/* Style the buttons inside the anchor elements */
+.nav-link li a button {
+    text-decoration: none; /* Remove underline for buttons inside anchor elements */
+}
+
+button {
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
+    color: #2e2d2d; /* Change to your preferred color */
+    padding: 9px 25px;
+    background-color: rgba(255, 216, 177, 1);
+    border: 1px solid transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    transition: all 0.4s ease 0s;
+    display: inline-block; /* Add this line to ensure the button inherits these styles */
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: rgba(255, 216, 177, 0.8);
+    border: 1px solid #888787;
+    transition: 0.5s;
+}
+
+h{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 20px;
     font-weight: normal;
 }
 
-/* This will apply to elements with class="myClass2" */
-.myClass2 {
-    font-size: 18px;
-    font-weight: lighter;
-    padding-left: 50px;
-}
-
-/* Format copyright */
-.myClass3 {
-    font-size: 12px;
+h3{
+    font-size: 20px;
     font-weight: normal;
-    color: #747373; /* Set the text color */
-    text-align: center;
-    font-family: 'courier', monospace;
-}
-
-.myClass4 {
-    font-size: 18px;
-    font-weight: lighter;
-}
-
-.myClass5 {
-    font-family: 'Courier New', Courier, monospace; /* Set the font family */
-    color: #000000; /* Set the text color */
-    font-size: 18px; /* Set the font size */
-    font-weight: lighter; /* Set the font weight */
-    line-height: 1; /* Set the line height */
-    margin-bottom: 8px; /* Add some space below each list item */
-    padding-left: 0px;
-}
-
-/* This will apply to the element with id="myId" */
-#myId {
-    background-color: lightgray;
-    padding: 10px;
-}
-
-
-header {
-    background-color: #FCD0B1;
-    max-width: 100%;
-    max-height: 100vh;
-    height: 100px; /* Adjust this value to match the height of your header */
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    padding-right: 0px;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    overflow-y: hidden; /* Prevents horizontal scrolling */
-    justify-content: space-between;
-}
-
-/* Setting the background colour of the body */
-body {
-    background-color: #FFF1E5;
-    min-height: 100vh; /* Makes the body at least as tall as the viewport */
-    overflow-y: auto; /* Adds a vertical scrollbar if necessary */
-    overflow-x: hidden; /* Adds a vertical scrollbar if necessary */
-    max-width: 100%;
-    height: 100%;
-    margin: 0; /* clockwise */
-    padding: 0; /* Adjust this value to match the height of your header */
+    padding-left: 10px;
 }
 
 /* Setting list item styles */
-li {
-    font-family: 'Courier New', Courier, monospace; /* Set the font family */
-    color: #000000; /* Set the text color */
-    font-size: 18px; /* Set the font size */
-    font-weight: lighter; /* Set the font weight */
-    line-height: 1; /* Set the line height */
-    margin-bottom: 8px; /* Add some space below each list item */
-    padding-left: 50px;
-}
+
 
 /* Format list with bullets */
 ul {
     list-style-type: square;
-    font-family: 'courier', monospace;
 }
 
-/* Format paragraphs */
-p {
-    font-family: 'Courier New', Courier, monospace; /* Set the font family */
-    color: #000000; /* Set the text color */
-    font-size: 18px; /* Set the font size */
-    font-weight: lighter; /* Set the font weight */
-    line-height: 1; /* Set the line height */
-    margin-bottom: 0px; /* Add some space below each paragraph */
-    padding-left: 0px;
-}
-
-/* Format the large logo */
+/* Format the large header logo */
 .logo2 {
-    width: 150px;  /* Adjust as needed */
+    width: 100px;  /* Adjust as needed */
     height: auto;  /* Keep the aspect ratio */
-    display: block;
+    padding-bottom: 5px;
+    cursor: pointer;
 }
 
-/* Format the logo */
+/* Format the footer logo */
 .logo {
     width: 50px;  /* Adjust as needed */
     height: auto;  /* Keep the aspect ratio */
@@ -155,13 +319,16 @@ p {
     text-align: center;
 }
 
+/*format the copyright*/
 
-footer {
-    background-color: #FCD0B1;
-    height: 120px; /* Adjust this value to match the height of your footer */
-    padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the content vertically */
-    justify-content: center; /* Centers the content horizontally */
+.copyright{
+    font-size: 12px;
+}
+
+
+.industry{
+    max-width: 100%;  /* The image will not be wider than its container */
+    max-height: 100%;  /* The image will not be taller than its container */
+    display: block;
+    text-align: center;
 }
