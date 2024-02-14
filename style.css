@@ -24,18 +24,28 @@ body{
     display: flex;
     flex-direction: column;
     align-items: left;
-    min-height: 400px;
+    min-height: 600px;
     padding: 100px 20vw;
    }
 
-   header{
-    position: relative;
+   header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 80px;
-    padding: 30px 10vw 30px 10vw;
-   }
+    min-height: 60px;
+    padding: 10px 10vw 10px 10vw;
+    transition: background-color 0.3s ease; /* Add transition for smooth color change */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
 
    footer{
     position: relative;
@@ -75,113 +85,6 @@ body{
     color: #F5F5F5;
    }
 
-/* Style the header arrow */
-
-.arrow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.arrow svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 30px;
-}
-
-.arrow .shape-fill {
-    fill: #F5F5F5;
-}
-
-/* Style the footer */
-.arrow2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.arrow2 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
-}
-
-.arrow2 .shape-fill {
-    fill: #e8e8f8;
-}
-
-
-.tilt{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.tilt svg{
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 61px;
-    transform: rotateY(180deg);
-}
-
-.tilt .shape-fill{
-    fill: #FFD8B1;
-}
-
-.tilt2{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.tilt2 svg{
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 61px;
-    transform: rotateY(360deg);
-}
-
-.tilt2 .shape-fill{
-    fill: black;
-}
-
-.tilt3{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.tilt3 svg{
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 61px;
-    transform: rotateY(180deg);
-}
-
-.tilt3 .shape-fill{
-    fill: #e8e8f8;
-}
-
 .wrapper {
     padding-top: 50px;
     display: grid;
@@ -216,12 +119,15 @@ body{
     object-fit: contain; /* or use 'cover' if you want the image to fill the grid cell */
 }
 
-/* Style the navigation bar */
-li a button {
+/* Shared styles for links */
+.nav-link li a{
     font-family: 'Roboto', 'sans-serif';
     font-size: 16px;
-    color: #2e2d2d; /* Change to your preferred color */
-    text-decoration: none; /* Remove underline */
+    color: #2e2d2d;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: color 0.5s ease, border-bottom 0.5s ease;
+    margin-right: 30px;
 }
 
 /* Remove bullet points from the navigation */
@@ -229,54 +135,38 @@ li a button {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Add this line to make the list items flex containers */
+    display: flex;
     font-weight: bold;
-}
-
-/* Style the navigation bar */
-.nav-link li a {
-    color: #2e2d2d; /* Change to your preferred color */
-    text-decoration: none; /* Remove underline */
-    border-bottom: 3px solid transparent;
-    transition: all 0.4s ease 0s;
-    margin-right: 30px; /* Add space between the links */
 }
 
 /* Change the color of links on hover */
 .nav-link li a:hover {
-    color: #888787; /* Change to your preferred color */
-    border-bottom: 3px solid #FFD8B1; /* Add underline */
+    color: #888787;
+    border-bottom: 3px solid #FFD8B1;
 }
 
-.nav-link li a:active {
-    border-bottom: 3px solid #FFD8B1; /* Add underline */
+/* Change the color of links on active state */
+.nav-link li a.active {
+    border-bottom: 3px solid #FFD8B1;
 }
 
-/* Style the buttons inside the anchor elements */
-.nav-link li a button {
-    text-decoration: none; /* Remove underline for buttons inside anchor elements */
-}
-
+/* Style the buttons */
 button {
-    font-family: 'Roboto', 'sans-serif';
-    font-size: 16px;
-    color: #2e2d2d; /* Change to your preferred color */
-    padding: 9px 25px;
+    padding: 5px 25px;
     background-color: rgba(255, 216, 177, 1);
     border: 1px solid transparent;
     border-radius: 50px;
     cursor: pointer;
-    text-decoration: none; /* Remove underline */
-    transition: all 0.4s ease 0s;
-    display: inline-block; /* Add this line to ensure the button inherits these styles */
-    align-items: center;
-    justify-content: center;
+    transition: background-color 0.5s ease, border 0.5s ease;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
+    color: #2e2d2d;
 }
 
+/* Change button styles on hover */
 button:hover {
     background-color: rgba(255, 216, 177, 0.8);
     border: 1px solid #888787;
-    transition: 0.5s;
 }
 
 h{
@@ -305,9 +195,8 @@ ul {
 
 /* Format the large header logo */
 .logo2 {
-    width: 100px;  /* Adjust as needed */
-    height: auto;  /* Keep the aspect ratio */
-    padding-bottom: 5px;
+    width: auto;  /* Adjust as needed */
+    height: 100px;  /* Keep the aspect ratio */
     cursor: pointer;
 }
 

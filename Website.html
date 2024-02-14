@@ -8,6 +8,7 @@
     <title>CMA Consulting</title>
     <link rel="icon" type="images/x-icon" href="images/favicon-light-background.png">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -15,29 +16,25 @@
 
 <body>
 
-    <header class="offwhite">
-    <a href="Website.html" class="logo2">
-        <img src="images/logo-light-background.png" alt="Company Logo" class="logo2">
-    </a>
-    <nav>
-        <ul class="nav-link">
-            <li><a href="Website.html">Welcome</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="howwework.html">How We Work</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-        <a href="contact.html" class="cta"><button>Get In Touch</button></a>
+    <header class="offwhite" id="myHeader">
+            <a href="Website.html" class="logo2">
+                <img src="images/logo-light-background.png" alt="Company Logo" class="logo2" id="logo">
+            </a>
+            <nav>
+                <ul class="nav-link">
+                    <li><a href="Website.html" class="active">Welcome</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="howwework.html">How We Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    
+                </ul>
+            </nav>
+            <a href="contact.html"><button>Get In Touch</button></a>
     </header>
 
 
     <main>
         <section2>
-            <div class="arrow">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
-                </svg>
-            </div>
             <p class="offwhitetext">BOTIQUE STRATEGY CONSULTANCY</p>
             <h class="offwhitetext">Helping to transform businesses and generate sustainable competitive advantage</h>
             <p class="offwhitetext">We work with New Zealand executives to help grow their export business by simplifying complexity, identifying opportunities, and focusing resources.</p>
@@ -74,6 +71,14 @@
         </a>
         <p class="copyright">&copy; 2024 CMA Consulting. All rights reserved</p>
     </footer>
+
+    <script src="script.js">
+    window.addEventListener('scroll', function() {
+        var logo = document.getElementById('logo');
+        var size = Math.max(60, 100 - window.pageYOffset / 5);
+        logo.style.height = size + 'px';
+    });
+    </script>
 
 </body>
 
