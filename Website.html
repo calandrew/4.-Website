@@ -8,7 +8,6 @@
     <title>CMA Consulting</title>
     <link rel="icon" type="images/x-icon" href="images/favicon-light-background.png">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -16,20 +15,21 @@
 
 <body>
 
-    <header class="offwhite" id="myHeader">
+    <header class="offwhite" id="header">
+            <div class="logo-container">
             <a href="Website.html" class="logo2">
                 <img src="images/logo-light-background.png" alt="Company Logo" class="logo2" id="logo">
             </a>
+            </div>
             <nav>
                 <ul class="nav-link">
                     <li><a href="Website.html" class="active">Welcome</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="howwework.html">How We Work</a></li>
                     <li><a href="about.html">About</a></li>
-                    
                 </ul>
             </nav>
-            <a href="contact.html"><button>Get In Touch</button></a>
+            <a href="contact.html"><button class="get-in-touch">Get In Touch</button></a>
     </header>
 
 
@@ -71,15 +71,7 @@
         </a>
         <p class="copyright">&copy; 2024 CMA Consulting. All rights reserved</p>
     </footer>
-
-    <script src="script.js">
-    window.addEventListener('scroll', function() {
-        var logo = document.getElementById('logo');
-        var size = Math.max(60, 100 - window.pageYOffset / 5);
-        logo.style.height = size + 'px';
-    });
-    </script>
-
+    <!-- <script src="script.js"></script>-->
 </body>
 
 </html>
