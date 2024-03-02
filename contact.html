@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMA Consulting</title>
     <link rel="icon" type="images/x-icon" href="images/favicon-light-background.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -35,21 +35,43 @@
     <main>
         <section>
             <h>Get In Touch</h>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="phone">Phone:</label><br>
-                <input type="phone" id="phone" name="phone"><br>
-                <label for="title">Title:</label><br>
-                <input type="text" id="title" name="title"><br>
-                <label for="company">Company:</label><br>
-                <input type="text" id="company" name="company"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br>
-                <input type="submit" value="Submit">
-              </form>
+            <section class="contact-wrap">
+                <form action="" class="contact-form">
+                  <div class="col-sm-6">
+                    <div class="input-block">
+                      <label for="">First Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="input-block">
+                      <label for="">Last Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="input-block">
+                      <label for="">Email</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="input-block">
+                      <label for="">Message Subject</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="input-block textarea">
+                      <label for="">Write your message here</label>
+                      <textarea rows="3" type="text" class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <button class="square-button">Send</button>
+                  </div>
+                </form>
+              </section>
         </section>
         </main>
 
@@ -61,7 +83,7 @@
             </a>
             <p class="copyright">&copy; 2024 CMA Consulting. All rights reserved</p>
         </footer>
-
+<script src="script.js"></script>
 </body>
 
 </html>
