@@ -15,40 +15,52 @@
 
 <body>
 
-    <header class="offwhite">
-    <a href="Website.html" class="logo2">
-        <img src="images/logo-light-background.png" alt="Company Logo" class="logo2">
-    </a>
-    <nav>
-        <ul class="nav-link">
-            <li><a href="Website.html">Welcome</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="howwework.html">How We Work</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-        <a href="contact.html" class="cta"><button>Get In Touch</button></a>
-    </header>
+    <header class="offwhite" id="header">
+        <div class="logo-container">
+        <a href="index.html" class="logo2">
+            <img src="images/logo-light-background.png" alt="Company Logo" class="logo2" id="logo">
+        </a>
+        </div>
+        <nav>
+            <ul class="nav-link">
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="howwework.html">How We Work</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html"><button class="get-in-touch">Get In Touch</button></a>
+</header>
 
     <main>
         <section>
-            <div class="arrow">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
-                </svg>
-            </div>
             <h>Get In Touch</h>
-            <p>[Contact form]</p>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="phone">Phone:</label><br>
+                <input type="phone" id="phone" name="phone"><br>
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title"><br>
+                <label for="company">Company:</label><br>
+                <input type="text" id="company" name="company"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Submit">
+              </form>
         </section>
         </main>
-    <footer class="offwhite">
-        <a href="contact.html" class="cta"><button>Get In Touch</button></a>
-        <br>
-        <a href="Website.html">
-            <img src="images/logo-transparent.png" alt="Company Logo" class=logo>
-        </a>
-        <p class="copyright">&copy; 2024 CMA Consulting. All rights reserved</p>
-    </footer>
+
+        <footer class="offwhite">
+            <a href="contact.html" class="button"><button>Get In Touch</button></a>
+            <br>
+            <a href="index.html">
+                <img src="images/logo-transparent.png" alt="Company Logo" class=logo>
+            </a>
+            <p class="copyright">&copy; 2024 CMA Consulting. All rights reserved</p>
+        </footer>
 
 </body>
 
