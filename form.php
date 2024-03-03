@@ -41,7 +41,7 @@ if (!empty($_POST)) {
 
        if (mail($toEmail, $emailSubject, $body, $headers)) {
 
-           header('Location: thank-you.html');
+           header('Location: index.html');
        } else {
            $errorMessage = 'Oops, something went wrong. Please try again later';
        }
