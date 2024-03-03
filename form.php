@@ -37,7 +37,7 @@ if (!empty($_POST)) {
        $toEmail = 'callum@cmaconsulting.co.nz';
        $emailSubject = 'New email from your contact form';
        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
-       $bodyParagraphs = ["Name: {$fname $lname}", "Email: {$email}", "Message:", $message];
+       $bodyParagraphs = ["First Name: {$fname}", "Last Name: {$lname}", "Email: {$email}", "Message:", $message];
        $body = join(PHP_EOL, $bodyParagraphs);
 
        if (mail($toEmail, $emailSubject, $body, $headers)) {
