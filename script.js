@@ -24,3 +24,4 @@ $('.contact-form').find('.form-control').each(function() {
       }, 300);
     }
   })
+

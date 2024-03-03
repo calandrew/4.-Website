@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMA Consulting</title>
     <link rel="icon" type="images/x-icon" href="images/favicon-light-background.png">
-    <link rel="stylesheet" type="text/css" href="style.scss">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 </head>
 
 <body>
@@ -36,41 +37,32 @@
         <section>
             <h>Get In Touch</h>
             <section class="contact-wrap">
-                <form action="" class="contact-form">
-                  <div class="col-sm-6">
+                <form method="POST" action="form.php" id="contact-form" class="contact-form">
+                    <label for="">First Name</label>
                     <div class="input-block">
-                      <label for="">First Name</label>
-                      <input type="text" class="form-control">
+                      <input name="fname" type="text" class="form-control">
                     </div>
-                  </div>
-                  <div class="col-sm-6">
+                    <label for="">Last Name</label>
                     <div class="input-block">
-                      <label for="">Last Name</label>
-                      <input type="text" class="form-control">
+                      <input name="lname" type="text" class="form-control">
                     </div>
-                  </div>
-                  <div class="col-sm-12">
+                    <label for="">Email</label>
                     <div class="input-block">
-                      <label for="">Email</label>
-                      <input type="text" class="form-control">
+                      <input name="email" type="text" class="form-control">
                     </div>
-                  </div>
-                  <div class="col-sm-12">
+                    <label for="">Phone</label>
                     <div class="input-block">
-                      <label for="">Message Subject</label>
-                      <input type="text" class="form-control">
+                      <input name="phone" type="text" class="form-control">
                     </div>
-                  </div>
-                  <div class="col-sm-12">
+                    <label for="">Message</label>
                     <div class="input-block textarea">
-                      <label for="">Write your message here</label>
-                      <textarea rows="3" type="text" class="form-control"></textarea>
+                      <textarea name="message" rows="10" type="text" class="form-control"></textarea>
                     </div>
                   </div>
-                  <div class="col-sm-12">
-                    <button class="square-button">Send</button>
+                    <button input type="submit" value="Send" class="square-button">Send</button>
                   </div>
                 </form>
+                <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
               </section>
         </section>
         </main>
@@ -84,6 +76,54 @@
             <p class="copyright">&copy; 2024 CMA Consulting. All rights reserved</p>
         </footer>
 <script src="script.js"></script>
+
+<script>
+  const constraints = {
+      fname: {
+          presence: { allowEmpty: false }
+      },
+      lname: {
+          presence: { allowEmpty: false }
+      },
+      email: {
+          presence: { allowEmpty: false },
+          email: true
+      },
+      phone: {
+          presence: { allowEmpty: false }
+      },
+      message: {
+          presence: { allowEmpty: false }
+      }
+  };
+
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', function (event) {
+    const formValues = {
+        fname: form.elements.fname.value,
+        lname: form.elements.lname.value,
+        email: form.elements.email.value,
+        phone: form.elements.phone.value,
+        message: form.elements.message.value
+    };
+
+    const errors = validate(formValues, constraints);
+
+    if (errors) {
+      event.preventDefault();
+      const errorMessage = Object
+          .values(errors)
+          .map(function (fieldValues) { return fieldValues.join(', ')})
+          .join("\n");
+
+      alert(errorMessage);
+    }
+  }, false);
+</script>
+
+
+
 </body>
 
 </html>
