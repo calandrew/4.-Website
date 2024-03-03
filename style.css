@@ -6,6 +6,103 @@ body{
     font-size: 16px;
    }
    
+/*contact form*/
+.contact-form {
+    margin-top: 20px;
+
+}
+
+.contact-form .input-block {
+    background-color: #F5F5F5;
+    border: solid 1px #FFD8B1;
+    width: 600px;
+    height: 50px;
+    padding: 0px;
+    position: relative;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-out;
+
+}
+
+.contact-form .form-control:focus {
+    outline: none !important;
+    background-color: white;
+}
+
+.contact-form .input-block.textarea {
+    height: auto;
+    width: 600px;
+    border: solid 1px #FFD8B1;  
+}
+
+.contact-form .input-block.textarea .form-control {
+    height: 100%;
+    resize: none;
+    width: 580px;
+    border: none;
+    font-family: 'Roboto', 'sans-serif';
+    color: #333;
+    margin-bottom: -4px;
+    padding-bottom: 0px;
+}
+
+.contact-form .input-block label {
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    display: block;
+    margin: 0;
+    z-index: 3;
+    color: #333;
+}
+
+.contact-form .input-block .form-control {
+    background-color: #F5F5F5;
+    width: 580px;
+    height:30px;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    color: #333;
+    font-size: 18px;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.contact-form .input-block :focus {
+    background-color: white;
+}
+
+.contact-form .square-button {
+    background-color: rgba(#FFD8B1, .8);
+    color: #333;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    padding: 0 60px;
+    height: 40px;
+    border: none;
+    width: 100%;
+}
+
+.contact-form .square-button:hover,
+.contact-form .square-button:focus {
+    background-color: rgba(255, 216, 177, 0.8);
+    border: 1px solid #888787;
+}
+
+/*----page styles---*/
+
+.contact-wrap {
+    padding: 0px;
+}
+
+/*----End of contact form---*/
+
    section{
     position: relative;
     display: flex;
@@ -39,7 +136,7 @@ body{
     padding: 10px 10vw 10px 10vw;
     transition: background-color 0.3s ease; /* Add transition for smooth color change */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
-}
+    }
 
 html {
     font-size: 62.5%;
@@ -104,20 +201,56 @@ html {
     }
 
   .wrapper2 {
+    padding-top: 10px;
     display: grid;
     place-items: center center;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
     width: 100%;
     grid-auto-rows: 200px;
     column-gap: 10px;
-    row-gap: 1em;
+    row-gap: 110px;
   }
+
+  .wrapper2 > * {
+    padding: 3px;
+    border-top: 1px solid #c2c0c0;
+    border-bottom: 1px solid #c2c0c0;
+}
+
+.wrapper2 img {
+    width: auto;
+    height: 300px;
+    object-fit: contain; /* or use 'cover' if you want the image to fill the grid cell */
+}
 
   .wrapper img {
     width: auto;
     height: 300px;
     object-fit: contain; /* or use 'cover' if you want the image to fill the grid cell */
 }
+
+.wrapper3 {
+    padding-top: 10px;
+    display: grid;
+    place-items: left center;
+    grid-template-columns: 0.6fr 1.5fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+    width: 100%;
+    column-gap: 10px;
+  }
+
+.wrapper3 img {
+    width: auto;
+    height: 200px;
+    object-fit: cover; /* or use 'cover' if you want the image to fill the grid cell */
+}
+
+.two-box {
+    grid-column: span 2; /* This will make the item span 2 columns */
+    grid-row: span 1; /* This will make the item span 2 rows */
+  }
+
 
 /* Shared styles for links */
 .nav-link li a{
@@ -192,12 +325,31 @@ h3{
     padding-left: 10px;
 }
 
+h4{
+    font-size: 16px;
+    font-weight: normal;
+    margin: 2px;
+}
+
+h5{
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+h6{
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+
 /* Setting list item styles */
 
 
 /* Format list with bullets */
 ul {
-    list-style-type: square;
+    list-style-type: disc;
 }
 
 /* Format the large header logo */
@@ -227,6 +379,13 @@ ul {
 
 
 .industry{
+    max-width: 100%;  /* The image will not be wider than its container */
+    max-height: auto;  /* The image will not be taller than its container */
+    display: block;
+    text-align: center;
+}
+
+.headshot{
     max-width: 100%;  /* The image will not be wider than its container */
     max-height: auto;  /* The image will not be taller than its container */
     display: block;
