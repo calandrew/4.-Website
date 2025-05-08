@@ -15,7 +15,7 @@ body {
     background-color: #F5F5F5;
     border: solid 1px #FFD8B1;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     height: 50px;
     padding: 0;
     position: relative;
@@ -31,7 +31,7 @@ body {
 .contact-form .input-block.textarea {
     height: auto;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     border: solid 1px #FFD8B1;
 }
 
@@ -87,7 +87,7 @@ body {
     height: 40px;
     border: none;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
 }
 
 .contact-form .square-button:hover,
