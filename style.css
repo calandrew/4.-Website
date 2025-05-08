@@ -257,6 +257,7 @@ footer {
 .wrapper2 > * {
     padding: 3px;
     border-top: 1px solid #c2c0c0;
+    text-align: center;
 }
 
 .wrapper3 {
@@ -276,6 +277,11 @@ footer {
     display: block;
     margin: 0 auto;
     border-radius: 15px; /* Added for rounded corners */
+}
+
+.wrapper2 .headshot {
+    margin: 0; /* Align left by removing auto margins */
+    float: left; /* Ensure left alignment */
 }
 
 .wrapper img,
