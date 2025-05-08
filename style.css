@@ -1,27 +1,26 @@
-body{
+body {
     margin: 0;
-    font-family: 'Roboto', 'sans-serif';
+    font-family: 'Roboto', sans-serif;
     color: #333;
     background: #FFF1E5;
     font-size: 16px;
-   }
-   
-/*contact form*/
+}
+
+/* Contact Form */
 .contact-form {
     margin-top: 20px;
-
 }
 
 .contact-form .input-block {
     background-color: #F5F5F5;
     border: solid 1px #FFD8B1;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 50px;
     padding: 0px;
     position: relative;
     margin-bottom: 10px;
     transition: all 0.3s ease-out;
-
 }
 
 .contact-form .form-control:focus {
@@ -31,16 +30,17 @@ body{
 
 .contact-form .input-block.textarea {
     height: auto;
-    width: 600px;
-    border: solid 1px #FFD8B1;  
+    width: 100%;
+    max-width: 600px;
+    border: solid 1px #FFD8B1;
 }
 
 .contact-form .input-block.textarea .form-control {
     height: 100%;
     resize: none;
-    width: 580px;
+    width: 100%;
     border: none;
-    font-family: 'Roboto', 'sans-serif';
+    font-family: 'Roboto', sans-serif;
     color: #333;
     margin-bottom: -4px;
     padding-bottom: 0px;
@@ -58,8 +58,8 @@ body{
 
 .contact-form .input-block .form-control {
     background-color: #F5F5F5;
-    width: 580px;
-    height:30px;
+    width: 100%;
+    height: 30px;
     padding: 10px;
     border: none;
     border-radius: 0;
@@ -67,7 +67,7 @@ body{
     position: relative;
     color: #333;
     font-size: 18px;
-    font-family: 'Roboto', 'sans-serif';
+    font-family: 'Roboto', sans-serif;
 }
 
 .contact-form .input-block :focus {
@@ -75,7 +75,7 @@ body{
 }
 
 .contact-form .square-button {
-    background-color: rgba(#FFD8B1, .8);
+    background-color: rgba(255, 216, 177, 0.8);
     color: #333;
     font-size: 22px;
     text-transform: uppercase;
@@ -95,24 +95,77 @@ body{
     border: 1px solid #888787;
 }
 
-/*----page styles---*/
-
+/* Page Styles */
 .contact-wrap {
     padding: 0px;
 }
 
-/*----End of contact form---*/
+/* Navbar Styles */
+.navbar.offwhite {
+    background: #F5F5F5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-   section{
+.navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #2e2d2d;
+    margin: 0 15px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.5s ease, border-bottom 0.5s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #888787;
+    border-bottom: 3px solid #FFD8B1;
+}
+
+.navbar-nav .nav-link.active {
+    border-bottom: 3px solid #FFD8B1;
+}
+
+.navbar-brand .logo2 {
+    height: 100px;
+    width: auto;
+}
+
+/* Get In Touch Button */
+.get-in-touch {
+    background-color: rgba(255, 216, 177, 1);
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 5px 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #2e2d2d;
+    transition: background-color 0.5s ease, border 0.5s ease;
+}
+
+.get-in-touch:hover {
+    background-color: rgba(255, 216, 177, 0.8);
+    border: 1px solid #888787;
+}
+
+/* Section Styles */
+section {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 400px;
-    padding: 100px 20vw;
-   }
+    padding: 50px 5vw;
+}
 
-   section2{
+@media (min-width: 768px) {
+    section {
+        padding: 100px 20vw;
+    }
+}
+
+section2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -123,28 +176,14 @@ body{
     align-items: left;
     min-height: 600px;
     padding: 100px 20vw;
-   }
-
-   #header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 40px;
-    padding: 10px 10vw 10px 10vw;
-    transition: background-color 0.3s ease; /* Add transition for smooth color change */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
-    }
+}
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-  }
+}
 
-
-   footer{
+footer {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -152,82 +191,56 @@ html {
     min-height: 100px;
     padding: 50px 10vw 40px 10vw;
     font-size: 16px;
-   }
+}
 
-   .midpeach{
+/* Color Classes */
+.midpeach {
     background: #FFD8B1;
-   }
+}
 
-   .lightpeach{
+.lightpeach {
     background: #FFF1E5;
-   }
+}
 
-   .blue{
+.blue {
     background: #e8e8f8;
-   }
+}
 
-   .black{
+.black {
     background: #000000;
-   }
+}
 
-   .offwhite{
+.offwhite {
     background: #F5F5F5;
-   }
+}
 
-   .darkgrey{
+.darkgrey {
     background: #c2c0c0;
-   }
+}
 
-   .offwhitetext{
+.offwhitetext {
     color: #F5F5F5;
-   }
+}
 
+/* Grid Layouts */
 .wrapper {
     padding-top: 50px;
-    display: grid;
-    place-items: center center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: min-content;
-    width: 100%;
-    grid-auto-rows: 200px;
-    column-gap: 10px;
-    row-gap: 110px;
-    }
+}
 
-   .wrapper > * {
-        padding: 3px;
-        border-top: 1px solid #c2c0c0;
-        border-bottom: 1px solid #c2c0c0;
-    }
-
-  .wrapper2 {
-    padding-top: 10px;
-    display: grid;
-    place-items: center center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: min-content;
-    width: 100%;
-    grid-auto-rows: 200px;
-    column-gap: 10px;
-    row-gap: 110px;
-  }
-
-  .wrapper2 > * {
+.wrapper > * {
     padding: 3px;
     border-top: 1px solid #c2c0c0;
     border-bottom: 1px solid #c2c0c0;
 }
 
-.wrapper2 img {
-    width: auto;
-    height: 300px;
-    object-fit: contain; /* or use 'cover' if you want the image to fill the grid cell */
+.wrapper2 {
+    padding-top: 10px;
 }
 
-  .wrapper img {
-    width: auto;
-    height: 300px;
-    object-fit: contain; /* or use 'cover' if you want the image to fill the grid cell */
+.wrapper2 > * {
+    padding: 3px;
+    border-top: 1px solid #c2c0c0;
+    border-bottom: 1px solid #c2c0c0;
 }
 
 .wrapper3 {
@@ -238,156 +251,85 @@ html {
     grid-template-rows: 1fr 0.5fr 0.5fr;
     width: 100%;
     column-gap: 10px;
-  }
-
-.wrapper3 img {
-    width: auto;
-    height: 200px;
-    object-fit: cover; /* or use 'cover' if you want the image to fill the grid cell */
 }
 
 .two-box {
-    grid-column: span 2; /* This will make the item span 2 columns */
-    grid-row: span 1; /* This will make the item span 2 rows */
-  }
-
-
-/* Shared styles for links */
-.nav-link li a{
-    font-family: 'Roboto', 'sans-serif';
-    font-size: 16px;
-    color: #2e2d2d;
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
-    transition: color 0.5s ease, border-bottom 0.5s ease;
-    margin-right: 15px;
-    margin-left: 15px;
+    grid-column: span 2;
+    grid-row: span 1;
 }
 
-/* Remove bullet points from the navigation */
-.nav-link {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    font-weight: bold;
-    align-items: center;
-    flex-shrink: 0;
+/* Image Styles */
+.industry, .headshot {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Change the color of links on hover */
-.nav-link li a:hover {
-    color: #888787;
-    border-bottom: 3px solid #FFD8B1;
+.wrapper img, .wrapper2 img {
+    max-height: 300px;
+    object-fit: contain;
 }
 
-/* Change the color of links on active state */
-.nav-link li a.active {
-    border-bottom: 3px solid #FFD8B1;
+.wrapper3 img {
+    max-height: 200px;
+    object-fit: cover;
 }
 
-/* Style the buttons */
-button {
-    padding: 5px 25px;
-    background-color: rgba(255, 216, 177, 1);
-    border: 1px solid transparent;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.5s ease, border 0.5s ease;
-    font-family: 'Roboto', 'sans-serif';
-    font-size: 16px;
-    color: #2e2d2d;
-}
-
-/* Change button styles on hover */
-button:hover {
-    background-color: rgba(255, 216, 177, 0.8);
-    border: 1px solid #888787;
-}
-
-.get-in-touch {
-    margin-left: auto;
-}
-
-h{
-    font-size: 28px;
+/* Typography */
+h {
+    font-size: clamp(24px, 5vw, 28px);
     font-weight: bold;
 }
 
-h2{
+h2 {
     font-size: 20px;
     font-weight: normal;
 }
 
-h3{
+h3 {
     font-size: 20px;
     font-weight: normal;
     padding-left: 10px;
 }
 
-h4{
+h4 {
     font-size: 16px;
     font-weight: normal;
     margin: 2px;
 }
 
-h5{
+h5 {
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 5px;
 }
 
-h6{
+h6 {
     font-size: 24px;
     font-weight: normal;
     margin-bottom: 5px;
 }
 
+p {
+    font-size: clamp(14px, 4vw, 16px);
+}
 
-/* Setting list item styles */
-
-
-/* Format list with bullets */
+/* List Styles */
 ul {
     list-style-type: disc;
 }
 
-/* Format the large header logo */
-.logo2 {
-    max-width: auto;  /* Adjust as needed */
-    height: 100px;  /* Keep the aspect ratio */
-    cursor: pointer;
-    display: block;
-    text-align: center;
-    justify-content: center;
-}
-
-/* Format the footer logo */
+/* Logo Styles */
 .logo {
-    width: 50px;  /* Adjust as needed */
-    height: auto;  /* Keep the aspect ratio */
+    width: 50px;
+    height: auto;
     display: block;
     text-align: center;
     justify-content: center;
 }
 
-/*format the copyright*/
-
-.copyright{
+/* Copyright */
+.copyright {
     font-size: 12px;
-}
-
-
-.industry{
-    max-width: 100%;  /* The image will not be wider than its container */
-    max-height: auto;  /* The image will not be taller than its container */
-    display: block;
-    text-align: center;
-}
-
-.headshot{
-    max-width: 100%;  /* The image will not be wider than its container */
-    max-height: auto;  /* The image will not be taller than its container */
-    display: block;
-    text-align: center;
 }
