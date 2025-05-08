@@ -291,8 +291,8 @@ footer {
 }
 
 .wrapper3 img {
-    max-height: 200px;
-    object-fit: cover;
+    max-height: 300px;
+    object-fit: contain;
 }
 
 /* Typography */
