@@ -1,8 +1,45 @@
+/*
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: #333;
     background: #FFF1E5;
+    font-size: 16px;
+}
+*/
+
+/* Ensure the html and body take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background: #FFF1E5; /* Keep for non-footer areas, but will be covered */
+    font-size: 16px;
+}
+
+/* Wrapper to push footer to bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+}
+
+/* Main content should take remaining space */
+main {
+    flex: 1 0 auto; /* Grow to fill available space, don't shrink */
+}
+
+/* Footer styling */
+footer.offwhite {
+    background: #F5F5F5; /* Offwhite background */
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+    padding: 50px 10vw 40px 10vw;
     font-size: 16px;
 }
 
@@ -196,10 +233,12 @@ section2 {
     padding: 100px 20vw;
 }
 
+/*
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+
 
 footer {
     position: relative;
@@ -210,6 +249,8 @@ footer {
     padding: 50px 10vw 40px 10vw;
     font-size: 16px;
 }
+*/
+
 
 /* Color Classes */
 .midpeach {
