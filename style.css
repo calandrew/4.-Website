@@ -270,9 +270,9 @@ footer {
 }
 
 .wrapper3 > * {
-    padding-top: 25px;
     padding: 3px;
     border-top: 1px solid #c2c0c0;
+    padding-top: 25px;
     text-align: left;
 }
 
