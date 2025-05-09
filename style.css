@@ -366,6 +366,7 @@ footer {
 h {
     font-size: clamp(24px, 5vw, 28px);
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 h2 {
