@@ -264,7 +264,6 @@ footer {
 }
 
 .wrapper3 {
-    padding-top: 25px;
     padding: 3px;
     text-align: left;
 }
@@ -272,7 +271,6 @@ footer {
 .wrapper3 > * {
     padding: 3px;
     border-top: 1px solid #c2c0c0;
-    padding-top: 25px;
     text-align: left;
 }
 
@@ -295,8 +293,8 @@ footer {
 
 .wrapper3 .headshot {
     margin: 0; /* Align left by removing auto margins */
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     float: left; /* Ensure left alignment */
 }
 
