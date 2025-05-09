@@ -270,6 +270,7 @@ footer {
 }
 
 .wrapper3 > * {
+    padding-top: 25px;
     padding: 3px;
     border-top: 1px solid #c2c0c0;
     text-align: left;
@@ -289,9 +290,10 @@ footer {
     margin: 0 auto;
     border-radius: 15px; /* Added for rounded corners */
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
-.wrapper2 .headshot {
+.wrapper3 .headshot {
     margin: 0; /* Align left by removing auto margins */
     float: left; /* Ensure left alignment */
 }
