@@ -6,7 +6,7 @@ body {
     background: #FFF1E5;
     font-size: 16px;
 }
-*/
+
 
 /* Ensure the html and body take up full height */
 html, body {
@@ -288,8 +288,7 @@ footer {
 }
 
 .wrapper > * {
-    padding: 10px; /* Consistent padding for all sides */
-    border-top: none; /* Remove border-top to avoid extra spacing */
+    padding: 3px;
     text-align: center;
 }
 
@@ -299,8 +298,7 @@ footer {
 }
 
 .wrapper2 > * {
-    padding: 10px; /* Consistent padding for all sides */
-    border-top: none; /* Remove border-top to avoid extra spacing */
+    padding: 3px;
     text-align: center;
 }
 
@@ -327,8 +325,6 @@ footer {
     display: block;
     margin: 0 auto;
     border-radius: 15px;
-    object-fit: contain;
-    width: 100%; /* Ensure images fill column width */
 }
 
 .headshot {
@@ -366,7 +362,6 @@ footer {
 h {
     font-size: clamp(24px, 5vw, 28px);
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 h2 {
