@@ -266,6 +266,7 @@ footer {
 .wrapper3 {
     padding: 3px;
     text-align: left;
+    overflow: visible; /* Ensure no clipping of rounded corners */
 }
 
 .wrapper3 > * {
@@ -293,9 +294,8 @@ footer {
     height: auto;
     display: block;
     margin: 0 auto;
-    border-radius: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    border-radius: 15px; /* Matches .industry */
+    object-fit: contain; /* Matches .industry */
 }
 
 
