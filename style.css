@@ -290,23 +290,15 @@ footer {
 }
 
 .wrapper3 .headshot {
-    margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 15px !important; /* Enforce rounded corners */
+    max-width: 100%;
+    height: auto;
     display: block;
-    overflow: hidden; /* Clip corners */
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 25px
 }
 
-/* Text Alignment Option 1: Keep text left-aligned (default) */
-.wrapper3 .col-md-6 {
-    text-align: left;
-}
 
-.wrapper3 .col-md-6 .headshot {
-    border-radius: 15px !important;
-    overflow: hidden !important;
-}
 
 /* Text Alignment Option 2: Center text (uncomment to use) */
 /*
@@ -324,8 +316,6 @@ footer {
 .wrapper3 img {
     max-height: 300px;
     object-fit: contain;
-    border-radius: 15px !important; /* Enforce for all images in wrapper3 */
-    overflow: hidden;
 }
 
 /* Typography */
