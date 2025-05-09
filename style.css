@@ -290,10 +290,10 @@ footer {
 }
 
 .wrapper3 .headshot {
+    border-radius: 15px !important;
     margin: 0;
     padding-top: 15px;
     padding-bottom: 15px;
-    border-radius: 15px; /* Redundant but retained for clarity */
     display: block; /* Ensure block behavior to prevent text wrapping */
 }
 
@@ -318,7 +318,6 @@ footer {
 .wrapper3 img {
     max-height: 300px;
     object-fit: contain;
-    border-radius: 15px;
 }
 
 /* Typography */
