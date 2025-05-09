@@ -297,6 +297,7 @@ footer {
     border-radius: 15px; /* Keep rounded corners */
     object-fit: contain; /* Consistent with .industry */
     text-align: left; /* Align image to the left */
+    margin-bottom: 20px; /* Add spacing below image */
 }
 
 
