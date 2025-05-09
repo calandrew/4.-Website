@@ -344,12 +344,13 @@ h5 {
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 h6 {
     font-size: 24px;
     font-weight: normal;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 p {
