@@ -303,6 +303,11 @@ footer {
     text-align: left;
 }
 
+.wrapper3 .col-md-6 .headshot {
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
 /* Text Alignment Option 2: Center text (uncomment to use) */
 /*
 .wrapper3 .col-md-6 {
