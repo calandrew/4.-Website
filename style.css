@@ -306,6 +306,7 @@ footer {
 .wrapper3 img {
     max-height: 300px;
     object-fit: contain;
+    border-radius: 15px;
 }
 
 /* Typography */
