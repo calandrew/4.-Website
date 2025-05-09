@@ -288,7 +288,8 @@ footer {
 }
 
 .wrapper > * {
-    padding: 3px;
+    padding: 10px; /* Consistent padding for all sides */
+    border-top: none; /* Remove border-top to avoid extra spacing */
     text-align: center;
 }
 
@@ -298,7 +299,8 @@ footer {
 }
 
 .wrapper2 > * {
-    padding: 3px;
+    padding: 10px; /* Consistent padding for all sides */
+    border-top: none; /* Remove border-top to avoid extra spacing */
     text-align: center;
 }
 
@@ -325,6 +327,8 @@ footer {
     display: block;
     margin: 0 auto;
     border-radius: 15px;
+    object-fit: contain;
+    width: 100%; /* Ensure images fill column width */
 }
 
 .headshot {
