@@ -21,7 +21,7 @@ body {
     width: 100%;
     max-width: 600px;
     height: 50px;
-    padding: 5px; /* Added for inner spacing */
+    padding: 5px;
     position: relative;
     margin-bottom: 10px;
     transition: all 0.3s ease-out;
@@ -32,7 +32,7 @@ body {
     width: 100%;
     max-width: 600px;
     border: solid 1px #FFD8B1;
-    padding: 5px; /* Added for inner spacing */
+    padding: 5px;
 }
 
 .contact-form .input-block .form-control:focus,
@@ -41,11 +41,11 @@ body {
 }
 
 .contact-form .input-block:has(.form-control:focus) {
-    background-color: white; /* White background on focus */
+    background-color: white;
 }
 
 .contact-form .input-block.textarea:has(.form-control:focus) {
-    background-color: white; /* White background for textarea on focus */
+    background-color: white;
 }
 
 .contact-form .input-block.textarea .form-control {
@@ -61,7 +61,7 @@ body {
 .contact-form .input-block label {
     position: absolute;
     left: 15px;
-    top: 5px; /* Adjusted for padding */
+    top: 5px;
     display: block;
     margin: 0;
     z-index: 3;
@@ -70,9 +70,9 @@ body {
 }
 
 .contact-form .input-block .form-control {
-    background-color: transparent; /* Transparent to show .input-block’s background */
+    background-color: transparent;
     width: 100%;
-    height: 40px; /* Increased to fill .input-block */
+    height: 40px;
     padding: 10px;
     border: none;
     border-radius: 0;
@@ -286,16 +286,28 @@ footer {
     height: auto;
     display: block;
     margin: 0 auto;
-    border-radius: 15px; /* Added for rounded corners */
+    border-radius: 15px;
 }
 
 .wrapper3 .headshot {
-    margin: 0; /* Align left by removing auto margins */
+    margin: 0;
     padding-top: 15px;
     padding-bottom: 15px;
-    border-radius: 15px;
-    float: left; /* Ensure left alignment */
+    border-radius: 15px; /* Redundant but retained for clarity */
+    display: block; /* Ensure block behavior to prevent text wrapping */
 }
+
+/* Text Alignment Option 1: Keep text left-aligned (default) */
+.wrapper3 .col-md-6 {
+    text-align: left;
+}
+
+/* Text Alignment Option 2: Center text (uncomment to use) */
+/*
+.wrapper3 .col-md-6 {
+    text-align: center;
+}
+*/
 
 .wrapper img,
 .wrapper2 img {
