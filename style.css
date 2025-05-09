@@ -295,6 +295,8 @@ footer {
 
 .wrapper3 .headshot {
     margin: 0; /* Align left by removing auto margins */
+    padding-top: 25px;
+    padding-bottom: 25px;
     float: left; /* Ensure left alignment */
 }
 
