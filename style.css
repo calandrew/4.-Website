@@ -293,6 +293,7 @@ footer {
     margin: 0; /* Align left by removing auto margins */
     padding-top: 15px;
     padding-bottom: 15px;
+    border-radius: 15px;
     float: left; /* Ensure left alignment */
 }
 
