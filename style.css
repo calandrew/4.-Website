@@ -265,6 +265,13 @@ footer {
 
 .wrapper3 {
     padding: 3px;
+    text-align: left;
+}
+
+.wrapper3 > * {
+    padding: 3px;
+    border-top: 1px solid #c2c0c0;
+    text-align: left;
 }
 
 .two-box {
