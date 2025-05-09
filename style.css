@@ -293,7 +293,9 @@ footer {
     margin: 0;
     padding-top: 15px;
     padding-bottom: 15px;
-    display: block; /* Ensure block behavior to prevent text wrapping */
+    border-radius: 15px !important; /* Enforce rounded corners */
+    display: block;
+    overflow: hidden; /* Clip corners */
 }
 
 /* Text Alignment Option 1: Keep text left-aligned (default) */
@@ -317,6 +319,8 @@ footer {
 .wrapper3 img {
     max-height: 300px;
     object-fit: contain;
+    border-radius: 15px !important; /* Enforce for all images in wrapper3 */
+    overflow: hidden;
 }
 
 /* Typography */
