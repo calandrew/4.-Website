@@ -293,9 +293,10 @@ footer {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
-    border-radius: 15px; /* Matches .industry */
-    object-fit: contain; /* Matches .industry */
+    margin: 0; /* Remove centering */
+    border-radius: 15px; /* Keep rounded corners */
+    object-fit: contain; /* Consistent with .industry */
+    text-align: left; /* Align image to the left */
 }
 
 
