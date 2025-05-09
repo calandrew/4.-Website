@@ -280,8 +280,7 @@ footer {
 }
 
 /* Image Styles */
-.industry,
-.headshot {
+.industry {
     max-width: 100%;
     height: auto;
     display: block;
@@ -289,13 +288,14 @@ footer {
     border-radius: 15px;
 }
 
-.wrapper3 .headshot {
+.headshot {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 15px;
-    padding: 25px
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 
